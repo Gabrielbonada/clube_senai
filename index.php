@@ -118,7 +118,7 @@ if (!isset($_SESSION['usuario'])) {
                 <div class="gallery-item"><img src="assets/colorido05.jpeg" alt="Arte 6"></div>
             </div>
             <div class="hero-buttons">
-                <a href="#" class="primary-btn">Acessar a toda galeria</a>
+                <a href="galeria.php" class="primary-btn">Acessar a toda galeria</a>
                 <a href="#" class="primary-btn">Acessar PDFS de coloridos</a>
             </div>
         </section>
