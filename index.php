@@ -165,19 +165,32 @@ if (!isset($_SESSION['usuario'])) {
                     <img src="assets/banner01.jpeg" alt="">
                 </div>
                 <div class="content-right">
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sequi facilis quibusdam
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sequi facilis quibusdam
                         nesciunt provident nostrum aspernatur nobis repellat, quo hic. Labore ratione illum sit
-                        doloremque quae natus, ipsa atque quos!</span>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae odit quos
+                        doloremque quae natus, ipsa atque quos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae odit quos
                         officia accusantium laboriosam nihil aliquam quisquam assumenda aspernatur? Eos hic molestiae
-                        non nesciunt maiores sapiente ipsam minima dignissimos.</span>
-                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias quos error commodi
+                        non nesciunt maiores sapiente ipsam minima dignissimos.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias quos error commodi
                         eos ullam saepe totam beatae tempore doloremque eligendi autem fugiat incidunt dolor nostrum,
-                        dolorum id iste asperiores?</span>
+                        dolorum id iste asperiores?</p>
+
+ <div class="hero-buttons" style="margin-top: 30px;">
+    <a href="blog.php" class="primary-btn">
+        Acompanhar meu Blog
+    </a>
+</div>
+
                 </div>
+                 
+               
+
             </div>
         </section>
 
+
+        </section>
+</section>
 
     </main>
 
