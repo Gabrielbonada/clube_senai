@@ -139,6 +139,51 @@ body{
     font-weight:600;
 }
 
+.erro-senha {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: red;
+}
+
+.input-error {
+    border-color: red !important;
+}
+.senha-container{
+    position: relative;
+}
+
+.toggle-senha{
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* MUITO IMPORTANTE 👇 */
+.senha-container input{
+    padding-right: 45px; 
+}
+.senha-wrapper{
+    position: relative;
+}
+
+.senha-wrapper input{
+    padding-right:45px;
+}
+
+.toggle-senha{
+    position:absolute;
+    right:16px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+}
+
+
+
+
 /* RESPONSIVO */
 
 @media(max-width:900px){
@@ -187,9 +232,12 @@ body{
                     <input name="email" type="email" placeholder="Seu melhor email" required>
                 </div>
 
-                <div class="input-group">
-                    <input name="senha" type="password" placeholder="Crie uma senha" required>
-                </div>
+<div class="input-group senha-container">
+    <input id="senha" name="senha" type="password" placeholder="Crie uma senha" required>
+    <span id="toggleSenha" class="toggle-senha">👁️</span>
+   
+</div>
+ <div id="erroSenha" class="erro-senha"></div>
 
                 <button type="submit" class="signup-btn">
                     Criar minha conta
@@ -202,27 +250,58 @@ body{
             </div>
 
         </div>
-
-    </div>
-
 </div>
 
+</div> 
 <script>
-   function validaSenhaSimples(senha) {
-  if (senha.length < 8) return false;
-  if (!senha.includes("@")) return false; 
-  return true;
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("formulario01");
+    const senhaInput = document.querySelector('input[name="senha"]');
+    const erroSenha = document.getElementById("erroSenha");
+    const toggleSenha = document.getElementById("toggleSenha");
 
-  document.getElementyByid("formulario01").addEventListener("submit", function(event)) {
+    console.log("JS carregado");
 
-  const senha = document.querySelector('input[name="senha]').value;
+    // Validação da senha
+    form.addEventListener("submit", function (event) {
+        let erros = [];
+        let senha = senhaInput.value;
 
-  if(!validaSenhaSimples(senha)){
-    alert("")
-  }
-  }
-}
+        if (senha.length < 8) {
+            erros.push("• Deve ter no mínimo 8 caracteres");
+        }
+        if (!/[A-Z]/.test(senha)) {
+            erros.push("• Deve conter pelo menos 1 letra maiúscula");
+        }
+        if (!/[0-9]/.test(senha)) {
+            erros.push("• Deve conter pelo menos 1 número");
+        }
+        if (!/[@$!%*?&]/.test(senha)) {
+            erros.push("• Deve conter pelo menos 1 caractere especial");
+        }
+
+        if (erros.length > 0) {
+            event.preventDefault(); // bloqueia envio
+            erroSenha.innerHTML = erros.join("<br>");
+            senhaInput.classList.add("input-error");
+        } else {
+            erroSenha.innerHTML = "";
+            senhaInput.classList.remove("input-error");
+        }
+    });
+
+    // Mostrar/ocultar senha
+    toggleSenha.addEventListener("click", function () {
+        const tipo = senhaInput.getAttribute("type") === "password" ? "text" : "password";
+        senhaInput.setAttribute("type", tipo);
+
+        // mudar ícone do olho
+        this.textContent = tipo === "password" ? "👁️" : "🙈";
+    });
+});
 </script>
+
+
 
 </body>
 </html>
