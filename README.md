@@ -13,7 +13,7 @@ Este site foi criado para um cliente. O obejtivo deste site é:
 
 ---
 
-##justificativa 
+<h2> Justificativa </h2> 
 
 A criação do site Clube das Amoras surgiu da necessidade da artista de fortalecer sua presença digital e estruturar sua atuação profissional na internet.
 
@@ -21,7 +21,7 @@ Atualmente, a maior parte da divulgação dos seus trabalhos ocorre por meio das
 
 ---
 
-## tecnologias utilizadas: 
+ <H2> tecnologias utilizadas: </H2>
 
 -Front-end: HTML5, CSS E JS 
 -Back-end: PHP e Mysql 
@@ -30,7 +30,7 @@ Atualmente, a maior parte da divulgação dos seus trabalhos ocorre por meio das
 
 ----
 
-##prototipo (wireframe) 
+<h2> Prototipo  </h2> 
 
 - Página inicial
 - página do blog
