@@ -1,6 +1,47 @@
 <?php
 session_start();
+var_dump($_SESSION);
 ?>
+<?php
+session_start();
+require 'conexao.php';
+
+if (isset($_POST['enviar_comentario'])) {
+
+    $nome = $_SESSION['usuario'] ?? 'Anônimo';
+    $cargo = !empty($_POST['cargo']) ? $_POST['cargo'] : 'Leitor';
+    $mensagem = $_POST['mensagem'];
+    $avaliacao = $_POST['avaliacao'];
+
+    $stmt = $pdo->prepare("
+        INSERT INTO comentarios (nome, cargo, mensagem, avaliacao)
+        VALUES (?, ?, ?, ?)
+    ");
+
+    $stmt->execute([$nome, $cargo, $mensagem, $avaliacao]);
+
+    header("Location: blog.php");
+    exit();
+}
+if (isset($_POST['criar_post']) && $_SESSION['tipo'] === 'admin') {
+
+    $titulo = $_POST['titulo'];
+    $conteudo = $_POST['conteudo'];
+    $imagem = $_POST['imagem'];
+    $autor = $_SESSION['usuario'];
+
+    $stmt = $pdo->prepare("
+        INSERT INTO posts (titulo, conteudo, imagem, autor)
+        VALUES (?, ?, ?, ?)
+    ");
+
+    $stmt->execute([$titulo, $conteudo, $imagem, $autor]);
+
+    header("Location: blog.php");
+    exit();
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -10,7 +51,8 @@ session_start();
     <title>Blog | Clube das Amoras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="blog.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
         rel="stylesheet">
@@ -86,38 +128,50 @@ session_start();
                 <span class="category">Dicas</span>
             </div>
         </section>
+        <?php if (isset($_SESSION['tipo']) && $_SESSION['tipo'] === 'admin'): ?>
+<section class="admin-create-post">
+    <h3>📝 Criar Novo Blog</h3>
+
+    <form method="POST" class="create-post-form">
+        <input type="text" name="titulo" placeholder="Título" required>
+
+        <input type="text" name="imagem" placeholder="URL da imagem">
+
+        <textarea name="conteudo" placeholder="Conteúdo do blog..." required></textarea>
+
+        <button type="submit" name="criar_post">Publicar Blog</button>
+    </form>
+</section>
+<?php endif; ?>
 
         <!-- POST PRINCIPAL -->
-        <section class="blog-post">
-            <div class="blog-container">
+      <section class="blog-post">
+<div class="blog-container">
 
-                <h2 class="blog-title">Como Escolher a Paleta Perfeita para Sua Ilustração</h2>
+<?php
+$result = $pdo->query("SELECT * FROM posts ORDER BY data_post DESC");
 
-                <p class="blog-meta">
-                    Publicado por <?= $_SESSION['usuario'] ?? 'Clube das Amoras' ?> • 12 Fevereiro 2026
-                </p>
+while ($post = $result->fetch(PDO::FETCH_ASSOC)):
+?>
 
-                <img src="assets/banner01.jpeg" class="blog-image" alt="">
+<h2 class="blog-title"><?= htmlspecialchars($post['titulo']) ?></h2>
 
-                <div class="blog-content">
-                    <p>
-                        A escolha da paleta de cores é uma das decisões mais importantes
-                        na construção de uma ilustração marcante.
-                    </p>
+<p class="blog-meta">
+Publicado por <?= htmlspecialchars($post['autor']) ?> • <?= date('d/m/Y', strtotime($post['data_post'])) ?>
+</p>
 
-                    <p>
-                        Quando você entende contraste, temperatura e harmonia,
-                        suas artes ganham profundidade e identidade.
-                    </p>
+<img src="<?= $post['imagem'] ?>" class="blog-image">
 
-                    <p>
-                        Neste artigo vou te mostrar como pensar cores de forma estratégica
-                        e emocional.
-                    </p>
-                </div>
+<div class="blog-content">
+<p><?= nl2br(htmlspecialchars($post['conteudo'])) ?></p>
+</div>
 
-            </div>
-        </section>
+<hr>
+
+<?php endwhile; ?>
+
+</div>
+</section>
 
         <!-- AUTOR -->
         <section class="author-section">
@@ -158,58 +212,67 @@ session_start();
             </div>
         </section>
 
+        <section class="comment-form-section">
+    <h3 class="section-title">Deixe seu comentário</h3>
+
+    <form method="POST" class="comment-form">
+        
+
+        <input type="text" name="cargo" placeholder="Profissão (opcional)">
+
+        <textarea name="mensagem" placeholder="Escreva seu comentário..." required></textarea>
+
+        <select name="avaliacao">
+            <option value="5">★★★★★</option>
+            <option value="4">★★★★☆</option>
+            <option value="3">★★★☆☆</option>
+            <option value="2">★★☆☆☆</option>
+            <option value="1">★☆☆☆☆</option>
+        </select>
+
+        <button type="submit" name="enviar_comentario">Publicar</button>
+    </form>
+</section>
+
         <!-- COMENTÁRIOS -->
         <section class="testimonials-section">
             <h3 class="section-title">Comentários dos Leitores</h3>
             <div class="testimonials-container">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i> </div>
-                    <p class="testimonial-text"> "Explicação incrível! Consegui aplicar tudo na minha arte no mesmo dia." </p>
-                    <div class="testimonial-author"> <img src="https://i.pravatar.cc/100?img=12" alt="">
-                        <div> <strong>Bernardo Lima</strong> <span>Designer</span> </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="far fa-star"></i> </div>
-                    <p class="testimonial-text"> "Muito claro e direto, adorei a parte sobre contraste." </p>
-                    <div class="testimonial-author"> <img src="https://i.pravatar.cc/100?img=22" alt="">
-                        <div> <strong>Juliana Costa</strong> <span>Ilustradora</span> </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i> </div>
-                    <p class="testimonial-text"> "Já quero mais conteúdos assim no blog!" </p>
-                    <div class="testimonial-author"> <img src="https://i.pravatar.cc/100?img=33" alt="">
-                        <div> <strong>Carlos Duarte</strong> <span>Leitor</span> </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i> </div>
-                    <p class="testimonial-text"> "Esse blog está ficando cada vez mais profissional." </p>
-                    <div class="testimonial-author"> <img src="https://i.pravatar.cc/100?img=44" alt="">
-                        <div> <strong>Fernanda Alves</strong> <span>Artista Digital</span> </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="far fa-star"></i> </div>
-                    <p class="testimonial-text"> "Adorei a identidade visual do site também." </p>
-                    <div class="testimonial-author"> <img src="https://i.pravatar.cc/100?img=55" alt="">
-                        <div> <strong>Luan Mendes</strong> <span>UX Designer</span> </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i> </div>
-                    <p class="testimonial-text"> "Simplesmente perfeito! Continue postando." </p>
-                    <div class="testimonial-author"> <img src="https://i.pravatar.cc/100?img=66" alt="">
-                        <div> <strong>Irael Rocha</strong> <span>Estudante</span> </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating"> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i> </div>
-                    <p class="testimonial-text"> "Esse tipo de conteúdo é ouro para quem está começando." </p>
-                    <div class="testimonial-author"> <img src="https://i.pravatar.cc/100?img=15" alt="">
-                        <div> <strong>Letícia Ramos</strong> <span>Iniciante em Ilustração</span> </div>
-                    </div>
+                <?php
+$result = $pdo->query("SELECT * FROM comentarios ORDER BY data_comentario DESC");
+
+while ($row = $result->fetch(PDO::FETCH_ASSOC)):
+?>
+
+<div class="testimonial-card">
+
+    <div class="testimonial-rating">
+        <?php
+        for ($i = 1; $i <= 5; $i++) {
+            if ($i <= $row['avaliacao']) {
+                echo '<i class="fas fa-star"></i>';
+            } else {
+                echo '<i class="far fa-star"></i>';
+            }
+        }
+        ?>
+    </div>
+
+    <p class="testimonial-text">
+        "<?= htmlspecialchars($row['mensagem']); ?>"
+    </p>
+
+    <div class="testimonial-author">
+        <img src="https://i.pravatar.cc/100?u=<?= urlencode($row['nome']); ?>" alt="">
+        <div>
+            <strong><?= htmlspecialchars($row['nome']); ?></strong>
+            <span><?= htmlspecialchars($row['cargo']); ?></span>
+        </div>
+    </div>
+
+</div>
+
+<?php endwhile; ?>
                 </div>
         </section>
 
