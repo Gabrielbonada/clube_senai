@@ -1,0 +1,126 @@
+/* =======================
+   GALERIA - BODY ROXO ESCURO
+======================= */
+body {
+    margin: 0;
+    background: #1a032b;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* =======================
+   HEADER DA GALERIA
+======================= */
+header {
+    background: #120020;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2e0a47;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+.logo span {
+    color: #c084fc;
+    font-style: italic;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c084fc;
+}
+
+/* =======================
+   TÍTULO DA GALERIA
+======================= */
+.titulo {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.titulo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 0;
+}
+
+.linha {
+    width: 80px;
+    height: 3px;
+    background: #c084fc;
+    margin: 15px auto;
+}
+
+/* =======================
+   CONTAINER DA GALERIA
+======================= */
+.galeria-container {
+    background: #000;
+    padding: 60px 80px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.item:hover img {
+    transform: scale(1.08);
+}
+
+/* =======================
+   FOOTER DA GALERIA
+======================= */
+footer {
+    background: #120020;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    border-top: 1px solid #2e0a47;
+}
+
+footer span {
+    color: #c084fc;
+    font-weight: 500;
+}
+
+/* =======================
+   RESPONSIVO PARA GALERIA
+======================= */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .galeria-container {
+        padding: 30px;
+    }
+}

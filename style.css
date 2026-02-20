@@ -1,149 +1,183 @@
+<<<<<<< HEAD
 /* ====================================================================
    VARIÁVEIS GLOBAIS - Cores, espaçamentos e tipografia
 ===================================================================== */
+=======
+/* =======================
+   VARIÁVEIS CSS GLOBAIS
+======================= */
+>>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
 :root {
-    --primary-purple: #6a0dad;
-    --dark-purple: #4b0082;
-    --black: #1a1a1a;
-    --white: #f8f8f8;
-    --gray: #333;
-    --accent-purple: #9b59b6;
+  --primary-purple: #6a0dad; /* Roxo principal */
+  --dark-purple: #4b0082; /* Roxo escuro */
+  --black: #1a1a1a; /* Preto */
+  --white: #f8f8f8; /* Branco */
+  --gray: #333; /* Cinza */
+  --accent-purple: #9b59b6; /* Roxo acento */
 }
 
+<<<<<<< HEAD
 /* ====================================================================
    RESET & BASE - Remove estilos padrão e aplica base do site
 ===================================================================== */
+=======
+/* =======================
+   RESET E ESTILOS GLOBAIS
+======================= */
+>>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--white);
-    color: var(--black);
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Playfair Display", serif;
 }
 
+<<<<<<< HEAD
 
 /* ====================================================================
    HEADER & NAVIGATION - Cabeçalho e menu de navegação
 ===================================================================== */
 
 /* Cabeçalho principal */
+=======
+/* =======================
+   HEADER E LOGO
+======================= */
+>>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: var(--black);
-    color: var(--white);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: var(--black);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 /* Logo e título */
 .logo h1 {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
 }
 
 .logo span {
-    color: var(--accent-purple);
-    font-style: italic;
+  color: var(--accent-purple);
+  font-style: italic;
 }
 
+<<<<<<< HEAD
 /* Botão menu (hamburger) */
+=======
+/* =======================
+   BOTÃO DO MENU
+======================= */
+>>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
 .menu-btn {
-    background: none;
-    border: none;
-    color: var(--white);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .menu-text {
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
 }
 
 .hamburger span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: var(--white);
-    margin: 5px 0;
-    transition: 0.3s;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--white);
+  margin: 5px 0;
+  transition: 0.3s;
 }
 
+<<<<<<< HEAD
 /* Sidebar - Menu lateral */
+=======
+/* =======================
+   SIDEBAR (MENU LATERAL)
+======================= */
+>>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
 .sidebar {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: var(--black);
-    z-index: 1000;
-    padding: 60px 40px;
-    transition: 0.5s;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--black);
+  z-index: 1000;
+  padding: 60px 40px;
+  transition: 0.5s;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar.active {
-    right: 0;
+  right: 0;
 }
 
 .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: var(--white);
-    cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
 }
 
 /* Links de navegação */
 .nav-links {
-    list-style: none;
-    margin-top: 40px;
+  list-style: none;
+  margin-top: 40px;
 }
 
 .nav-links li {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .nav-links a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: 0.3s;
-    display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  display: block;
 }
 
 .nav-links a:hover {
-    color: var(--accent-purple);
-    padding-left: 10px;
+  color: var(--accent-purple);
+  padding-left: 10px;
 }
 
 .login-item {
-    margin-top: 50px;
-    border-top: 1px solid var(--gray);
-    padding-top: 20px;
+  margin-top: 50px;
+  border-top: 1px solid var(--gray);
+  padding-top: 20px;
 }
 
+<<<<<<< HEAD
 
 /* ====================================================================
    SEÇÃO HERO (HOME) - Banner principal com CTA
@@ -931,6 +965,81 @@ footer {
         padding: 10px;
         font-size: 1rem;
     }
+=======
+/* =======================
+   SEÇÃO HERO (PÁGINA INICIAL)
+======================= */
+.hero {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+    rgba(248, 248, 248, 0.9),
+    rgba(248, 248, 248, 0.95)
+  );
+  padding: 0 10%;
+}
+
+.hero-tag {
+  display: inline-block;
+  background-color: rgba(106, 13, 173, 0.1);
+  color: var(--primary-purple);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-content h2 {
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 35px auto;
+  color: var(--gray);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.primary-btn {
+  background: var(--primary-purple);
+  color: white;
+  padding: 14px 32px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: var(--dark-purple);
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  border: 1px solid var(--black);
+  padding: 14px 32px;
+  text-decoration: none;
+  color: var(--black);
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  background: var(--black);
+  color: white;
+>>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
 }
 
 /* Celulares Médios - 480px */
@@ -1266,82 +1375,473 @@ footer {
     color: var(--gray);
 }
 /* =======================
-   TESTIMONIALS SECTION
+   SEÇÃO GALERIA (PÁGINA INICIAL)
 ======================= */
-
-.testimonials-section {
-    padding: 80px 5%;
-    background-color: var(--white);
+.gallery-section {
+  padding: 80px 5%;
+  background-color: var(--black);
+  color: var(--white);
 }
 
-.testimonials-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-.testimonial-card {
-    max-width: 340px;
-    padding: 30px;
-    border: 1px solid #eee;
-    transition: 0.3s ease;
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-purple);
+  margin: 15px auto;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
-.testimonial-rating {
-    color: var(--primary-purple);
-    margin-bottom: 15px;
-    font-size: 14px;
+.gallery-item {
+  overflow: hidden;
+  height: 350px;
+  border: 1px solid var(--gray);
+  transition: 0.3s;
 }
 
-.testimonial-text {
-    font-size: 0.95rem;
-    color: var(--gray);
-    margin-bottom: 25px;
-    line-height: 1.6;
-    font-style: italic;
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  filter: grayscale(30%);
 }
 
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%);
 }
 
-.testimonial-author img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
+/* =======================
+   SEÇÃO CURSOS (PÁGINA INICIAL)
+======================= */
+.courses-section {
+  padding: 80px 5%;
+  background-color: var(--white);
 }
 
-.testimonial-author strong {
-    font-family: 'Playfair Display', serif;
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.testimonial-author span {
-    font-size: 0.8rem;
-    color: var(--gray);
-}
-/* BOTÃO BLOG - variação elegante */
-
-.blog-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s ease;
+.course-card {
+  width: 350px;
+  background: white;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
 }
 
-.blog-btn i {
-    font-size: 14px;
+.course-card:hover {
+  transform: translateY(-10px);
 }
 
+<<<<<<< HEAD
 .blog-btn:hover {
     transform: translateY(-3px);
    
 }
+=======
+.course-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.course-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.course-info h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.course-info p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.price {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-purple);
+  margin-bottom: 20px;
+}
+
+.buy-btn {
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: var(--primary-purple);
+}
+
+/* =======================
+   SEÇÃO SOBRE (PÁGINA INICIAL)
+======================= */
+.content-left img {
+  width: 700px;
+}
+.content-right span {
+  width: 600px;
+  display: flex;
+}
+
+.blog {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+.content-right {
+  max-width: 600px;
+}
+
+.content-right p {
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.8;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Detalhe decorativo lateral nos parágrafos */
+.content-right p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  height: 80%;
+  background-color: var(--primary-purple);
+}
+
+/* =======================
+   BOTÃO BLOG
+======================= */
+.blog-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.blog-btn i {
+  font-size: 14px;
+}
+
+.blog-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 50px 5%;
+  text-align: center;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--accent-purple);
+}
+
+/* =======================
+   MODAL (NEWSLETTER)
+======================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 10% auto;
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+  border-top: 5px solid var(--primary-purple);
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-body h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.modal-body p {
+  margin-bottom: 25px;
+  color: var(--gray);
+}
+
+#newsletter-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+}
+
+.subscribe-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-purple);
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: var(--dark-purple);
+}
+
+/* =======================
+   SEÇÃO TESTIMONIALS (BLOG)
+======================= */
+.testimonials-section {
+  padding: 80px 5%;
+  background-color: var(--white);
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.testimonial-card {
+  max-width: 340px;
+  padding: 30px;
+  border: 1px solid #eee;
+  transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial-rating {
+  color: var(--primary-purple);
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: var(--gray);
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial-author img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.testimonial-author strong {
+  font-family: "Playfair Display", serif;
+}
+
+.testimonial-author span {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+/* =======================
+   PÁGINA BLOG
+======================= */
+.blog-post {
+  padding: 100px 5%;
+  background-color: var(--white);
+}
+
+.blog-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blog-title {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.blog-meta {
+  color: var(--gray);
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+.blog-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 40px;
+}
+
+.blog-content p {
+  margin-bottom: 25px;
+  line-height: 1.9;
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+
+/* CATEGORIAS DO BLOG */
+.blog-categories {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.category {
+  padding: 8px 18px;
+  background: #eee;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.category:hover,
+.category.active {
+  background: #c2185b;
+  color: white;
+}
+
+/* SEÇÃO AUTOR */
+.author-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.author-box {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.author-box img {
+  border-radius: 50%;
+}
+
+/* POSTS RELACIONADOS */
+.related-posts {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.related-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.related-card {
+  width: 250px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.related-card img {
+  width: 100%;
+}
+
+.related-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =======================
+   RESPONSIVO
+======================= */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+  .sidebar {
+    width: 100%;
+    right: -100%;
+  }
+}
+>>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb

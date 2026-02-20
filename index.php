@@ -18,8 +18,14 @@ if (!isset($_SESSION['usuario'])) {
     <!-- bibliotecas do site e links  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Clube das Amoras | Portfolio & Cursos</title>
     <link rel="stylesheet" href="style.css">
+=======
+    <title>Colorista Artística | Portfolio & Cursos</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+>>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
         rel="stylesheet">
