@@ -37,4 +37,4 @@ Atualmente, a maior parte da divulgação dos seus trabalhos ocorre por meio das
 - cadastro e login
 - newsletter
 
-[acesse nosso prototipo por aqui](https://excalidraw.com/#json=Mux5wZoWyM_jhA0_P8avs,PiLDaGjggJca3f_8qeHgAw)
+[acesse nosso prototipo por aqui]([https://excalidraw.com/#json=Mux5wZoWyM_jhA0_P8avs,PiLDaGjggJca3f_8qeHgAw](https://excalidraw.com/#room=55ed9619d6f99ae591e8,rbZ3uFRPia-L2dt0xz2nMw))
