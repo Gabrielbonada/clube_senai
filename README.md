@@ -1,6 +1,6 @@
 # Clube das amoras - site artistico 
 
-##Escopo do projeto 
+<h2> Escopo do projeto </h2>   
 
 Este site foi criado para um cliente. O obejtivo deste site é:
 
