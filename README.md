@@ -25,7 +25,7 @@ Atualmente, a maior parte da divulgação dos seus trabalhos ocorre por meio das
 
 -Front-end: HTML5, CSS E JS 
 -Back-end: PHP e Mysql 
--API: ---
+-API: 
 -Versionamento: Git e Github
 
 ----
