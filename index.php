@@ -1,3 +1,5 @@
+<!--  -->
+<!--sistema de segurança. Usuario precisa estar logado para entrar no sistema-->
 <?php
 session_start();
 
@@ -13,9 +15,10 @@ if (!isset($_SESSION['usuario'])) {
 <html lang="pt-BR">
 
 <head>
+    <!-- bibliotecas do site e links  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorista Artística | Portfolio & Cursos</title>
+    <title>Clube das Amoras | Portfolio & Cursos</title>
     <link rel="stylesheet" href="style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
@@ -27,6 +30,8 @@ if (!isset($_SESSION['usuario'])) {
 </head>
 
 <body>
+    <!-- estrutura do site, header, nav, main e footer  -->
+    <!-- header com logo e menu hamburguer  -->
     <header>
         <div class="logo">
             <h1>Clube Das<span> Amoras</span></h1>
@@ -41,6 +46,7 @@ if (!isset($_SESSION['usuario'])) {
         </button>
     </header>
 
+    <!-- componente de sidebar com sistema de cadastro por php  -->
     <nav id="sidebar" class="sidebar">
         <button id="close-sidebar" class="close-btn">&times;</button>
         <ul class="nav-links">
@@ -83,26 +89,28 @@ if (!isset($_SESSION['usuario'])) {
     </nav>
 
     <main>
+        <!-- sessão CTA para site -->
 
         <section id="home" class="hero">
 
             <div class="hero-content">
-                <span class="hero-tag">Tratamento artístico profissional</span>
+                <span class="hero-tag">colorir é coisa de gente grande </span>
 
-                <h2>Transforme suas ilustrações em obras memoráveis</h2>
+                <h2>Explore o universo das cores </h2>
 
                 <p>
-                    Mais cor, mais vida e um acabamento que faz sua arte ser impossível de ignorar.
+                    descobrindo o caminho para colorir com masteria
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#" class="primary-btn">Transformar minha ilustração</a>
-                    <a href="#" class="secondary-btn">Ver resultados</a>
+                    <a href="#" class="primary-btn">aaa</a>
+                    <a href="#" class="secondary-btn">aaa</a>
+
                 </div>
             </div>
         </section>
 
-
+        <!-- Galeria de imagens com desenhos -->
         <section id="galeria" class="gallery-section">
             <h3 class="section-title">Galeria de Coloridos</h3>
             <div class="gallery-grid">
@@ -114,14 +122,70 @@ if (!isset($_SESSION['usuario'])) {
                 <div class="gallery-item"><img src="assets/colorido05.jpeg" alt="Arte 6"></div>
                 <div class="gallery-item"><img src="assets/colorido05.jpeg" alt="Arte 6"></div>
                 <div class="gallery-item"><img src="assets/colorido05.jpeg" alt="Arte 6"></div>
-                <div class="gallery-item"><img src="assets/colorido05.jpeg" alt="Arte 6"></div>
-                <div class="gallery-item"><img src="assets/colorido05.jpeg" alt="Arte 6"></div>
+
             </div>
             <div class="hero-buttons">
                 <a href="galeria.php" class="primary-btn">Acessar a toda galeria</a>
                 <a href="#" class="primary-btn">Acessar PDFS de coloridos</a>
             </div>
         </section>
+        <!-- aboutme - Imagem ESQUERDA, Texto DIREITA -->
+
+        <section id="about-me" class="aboutme-section">
+            <h3 class="aboutme-title">Sobre mim!</h3>
+            <div class="box">
+                <div class="content-left">
+                    <img src="assets/banner01.jpeg" alt="">
+                </div>
+                <div class="content-right">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sequi facilis quibusdam
+                        nesciunt provident nostrum aspernatur nobis repellat, quo hic. Labore ratione illum sit
+                        doloremque quae natus, ipsa atque quos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae odit quos
+                        officia accusantium laboriosam nihil aliquam quisquam assumenda aspernatur? Eos hic molestiae
+                        non nesciunt maiores sapiente ipsam minima dignissimos.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias quos error commodi
+                        eos ullam saepe totam beatae tempore doloremque eligendi autem fugiat incidunt dolor nostrum,
+                        dolorum id iste asperiores?</p>
+                        <div class="hero-buttons">
+                        <a style="margin-top: 10px;" href="blog.php" class="primary-btn">Acompanhe o blog</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metodologia - Texto ESQUERDA, Imagem DIREITA (flex-direction: row-reverse inverte visualmente) -->
+        <section id="methodology" class="methodology-section">
+            <h3 class="methodology-title">Clube das amoras</h3>
+            <div class="box-inverted">
+                <div class="content-left">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sequi facilis quibusdam
+                        nesciunt provident nostrum aspernatur nobis repellat, quo hic. Labore ratione illum sit
+                        doloremque quae natus, ipsa atque quos!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae odit quos
+                        officia accusantium laboriosam nihil aliquam quisquam assumenda aspernatur? Eos hic molestiae
+                        non nesciunt maiores sapiente ipsam minima dignissimos.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias quos error commodi
+                        eos ullam saepe totam beatae tempore doloremque eligendi autem fugiat incidunt dolor nostrum,
+                        dolorum id iste asperiores?</p>
+                    <div class="hero-buttons">
+                        <a style="margin-top: 10px;" href="galeria.php" class="primary-btn">Vem participar das amoras</a>
+
+                    </div>
+                </div>
+
+                <div class="content-right">
+                    <img src="assets/banner01.jpeg" alt="">
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- sessão de cursos  -->
 
         <section id="cursos" class="courses-section">
             <h3 class="section-title">Nossos Cursos</h3>
@@ -158,43 +222,16 @@ if (!isset($_SESSION['usuario'])) {
             </div>
         </section>
 
-        <section id="galeria" class="gallery-section">
-            <h3 class="section-title">Sobre mim!</h3>
-            <div id="blog" class="blog">
-                <div class="content-left">
-                    <img src="assets/banner01.jpeg" alt="">
-                </div>
-                <div class="content-right">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sequi facilis quibusdam
-                        nesciunt provident nostrum aspernatur nobis repellat, quo hic. Labore ratione illum sit
-                        doloremque quae natus, ipsa atque quos!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae odit quos
-                        officia accusantium laboriosam nihil aliquam quisquam assumenda aspernatur? Eos hic molestiae
-                        non nesciunt maiores sapiente ipsam minima dignissimos.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias quos error commodi
-                        eos ullam saepe totam beatae tempore doloremque eligendi autem fugiat incidunt dolor nostrum,
-                        dolorum id iste asperiores?</p>
 
- <div class="hero-buttons" style="margin-top: 30px;">
-    <a href="blog.php" class="primary-btn">
-        Acompanhar meu Blog
-    </a>
-</div>
-
-                </div>
-                 
-               
-
-            </div>
-        </section>
 
 
         </section>
-</section>
+        </section>
+
 
     </main>
 
-
+    <!-- fotter com redes sociais  -->
     <footer id="contato">
         <div class="footer-content">
             <p>&copy; 2026 Clube das amoras. Todos os direitos reservados.</p>
@@ -202,10 +239,16 @@ if (!isset($_SESSION['usuario'])) {
                 <a href="https://www.instagram.com/coresemsintonia/"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@coresemsintonia5325"><i class="fab fa-youtube"></i></a>
                 <a href="https://pin.it/4GtJQujJQ"><i class="fab fa-pinterest"></i></a>
-                <a href="logout.php">Sair</a>
             </div>
         </div>
     </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5551985462737" target="_blank" class="whatsapp-btn" title="Envie uma mensagem no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Modal de Newsletter -->
 
     <div id="newsletter-modal" class="modal">
         <div class="modal-content">
