@@ -1,6 +1,9 @@
 /* =======================
    SEÇÃO HERO (PÁGINA INICIAL)
 ======================= */
+html {
+  scroll-behavior: smooth;
+}
 .hero {
   height: 75vh;
   display: flex;
@@ -201,7 +204,8 @@
    SEÇÃO SOBRE (PÁGINA INICIAL)
 ======================= */
 .content-left img {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
 }
 .content-right span {
   width: 600px;
@@ -216,6 +220,11 @@
 
 .content-right {
   max-width: 600px;
+}
+.content-right p.text{
+  color: var(--black);
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .content-right p {
@@ -321,11 +330,103 @@
   background-color: var(--dark-purple);
 }
 
+
 /* =======================
    RESPONSIVO PARA INDEX
 ======================= */
 @media (max-width: 768px) {
   .hero-content h2 {
     font-size: 2.5rem;
+  }
+}
+/* ===============================
+   RESPONSIVIDADE GERAL
+================================= */
+
+@media (max-width: 1024px) {
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 80px 5%;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* GALERIA */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* CURSOS */
+  .courses-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card {
+    width: 90%;
+  }
+
+  /* SOBRE E CLUBE */
+  .box,
+  .box-inverted {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .content-left img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .content-right {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* GALERIA */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* HEADER */
+  header {
+    padding: 15px 5%;
+  }
+
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+
+  /* FOOTER */
+  .social-links a {
+    margin: 0 8px;
   }
 }

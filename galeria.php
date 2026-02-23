@@ -152,11 +152,12 @@ $imagens = glob("*.{jpg,jpeg,png,gif,webp}", GLOB_BRACE);
     <nav id="sidebar" class="sidebar">
         <button id="close-sidebar" class="close-btn">&times;</button>
         <ul class="nav-links">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#galeria">Galeria de Coloridos</a></li>
-            <li><a href="#cursos">Produtos & Cursos</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#contato">Contatos</a></li>
+            <li><a href="index.php#home">Início</a></li>
+            <li><a href="index.php#galeria">Galeria de Coloridos</a></li>
+            <li><a href="index.php#cursos">Produtos & Cursos</a></li>
+            <li><a href="index.php#about-me">Blog & sobre mim</a></li>
+            <li><a href="index.php#clube_das_amoras">Clube das amoras</a></li>
+            <li><a href="index.php#contato">Contatos</a></li>
             <?php if (!isset($_SESSION['usuario'])): ?>
 
                 <li class="login-item">
@@ -248,11 +249,16 @@ $imagens = glob("*.{jpg,jpeg,png,gif,webp}", GLOB_BRACE);
 </section>
 
 <!-- FOOTER -->
-<footer>
-    © <?php echo date("Y"); ?> <span>Clube das Artes</span> • Todos os direitos reservados
-    <br>
-    Desenvolvido com criatividade 🎨
-</footer>
+ <footer id="contato">
+        <div class="footer-content">
+            <p>&copy; 2026 Clube das amoras. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/coresemsintonia/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@coresemsintonia5325"><i class="fab fa-youtube"></i></a>
+                <a href="https://pin.it/4GtJQujJQ"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </footer>
 <script src="script.js"></script>
 
 </body>

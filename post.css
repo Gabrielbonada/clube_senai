@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ===== TÍTULO ===== */
+
+.post-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+}
+
+.post-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.linha-decorativa {
+    width: 60px;
+    height: 4px;
+    background-color: #7b2cbf;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* ===== CONTAINER ===== */
+
+.post-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+/* ===== IMAGEM ===== */
+
+.post-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== TEXTO ===== */
+
+.post-content {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+    border-left: 4px solid #7b2cbf;
+    padding-left: 20px;
+}
+
+/* ===== BOTÃO ===== */
+
+.post-footer {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.btn-voltar {
+    background-color: #7b2cbf;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btn-voltar:hover {
+    background-color: #5a189a;
+}
+
+/* ===== TITLE POST ===== */
+
+.title-post {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}

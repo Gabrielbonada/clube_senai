@@ -9,7 +9,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $email = $_POST['email'] ?? '';
     $senha = $_POST['senha'] ?? '';
 
-    // busca usuário
     $sql = "SELECT * FROM cadastro_das_amoras WHERE email = ?";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$email]);
@@ -18,11 +17,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($user && password_verify($senha, $user['senha'])){
 
-        // cria sessão
         $_SESSION['usuario'] = explode(" ", $user['nome'])[0];
         $_SESSION['id'] = $user['ID'];
+        $_SESSION['tipo'] = $user['tipo']; // ⭐ AQUI CERTO
 
-        // manda pro sistema
         header("Location: index.php");
         exit();
 

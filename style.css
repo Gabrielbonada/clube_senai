@@ -1,12 +1,11 @@
-<<<<<<< HEAD
+
 /* ====================================================================
    VARIÁVEIS GLOBAIS - Cores, espaçamentos e tipografia
-===================================================================== */
-=======
+
 /* =======================
    VARIÁVEIS CSS GLOBAIS
 ======================= */
->>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
+
 :root {
   --primary-purple: #6a0dad; /* Roxo principal */
   --dark-purple: #4b0082; /* Roxo escuro */
@@ -16,15 +15,15 @@
   --accent-purple: #9b59b6; /* Roxo acento */
 }
 
-<<<<<<< HEAD
+
 /* ====================================================================
    RESET & BASE - Remove estilos padrão e aplica base do site
 ===================================================================== */
-=======
+
 /* =======================
    RESET E ESTILOS GLOBAIS
 ======================= */
->>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
+
 * {
   margin: 0;
   padding: 0;
@@ -46,18 +45,18 @@ h4 {
   font-family: "Playfair Display", serif;
 }
 
-<<<<<<< HEAD
+
 
 /* ====================================================================
    HEADER & NAVIGATION - Cabeçalho e menu de navegação
 ===================================================================== */
 
 /* Cabeçalho principal */
-=======
+
 /* =======================
    HEADER E LOGO
 ======================= */
->>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
+
 header {
   display: flex;
   justify-content: space-between;
@@ -81,13 +80,12 @@ header {
   font-style: italic;
 }
 
-<<<<<<< HEAD
-/* Botão menu (hamburger) */
-=======
+
+
 /* =======================
    BOTÃO DO MENU
 ======================= */
->>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
+
 .menu-btn {
   background: none;
   border: none;
@@ -113,13 +111,12 @@ header {
   transition: 0.3s;
 }
 
-<<<<<<< HEAD
 /* Sidebar - Menu lateral */
-=======
+
 /* =======================
    SIDEBAR (MENU LATERAL)
 ======================= */
->>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -177,7 +174,7 @@ header {
   padding-top: 20px;
 }
 
-<<<<<<< HEAD
+
 
 /* ====================================================================
    SEÇÃO HERO (HOME) - Banner principal com CTA
@@ -965,7 +962,7 @@ footer {
         padding: 10px;
         font-size: 1rem;
     }
-=======
+
 /* =======================
    SEÇÃO HERO (PÁGINA INICIAL)
 ======================= */
@@ -1039,7 +1036,7 @@ footer {
 .secondary-btn:hover {
   background: var(--black);
   color: white;
->>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
+
 }
 
 /* Celulares Médios - 480px */
@@ -1453,12 +1450,12 @@ footer {
   transform: translateY(-10px);
 }
 
-<<<<<<< HEAD
+
 .blog-btn:hover {
     transform: translateY(-3px);
    
 }
-=======
+
 .course-img {
   height: 200px;
   background-size: cover;
@@ -1527,7 +1524,7 @@ footer {
 
 .content-right p {
   font-size: 1rem;
-  color: var(--white);
+  /*color: var(--white);*/
   margin-bottom: 20px;
   line-height: 1.8;
   position: relative;
@@ -1777,7 +1774,7 @@ footer {
 
 .category:hover,
 .category.active {
-  background: #c2185b;
+  background: #9b59b6;
   color: white;
 }
 
@@ -1844,4 +1841,5 @@ footer {
     right: -100%;
   }
 }
->>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
+
+}

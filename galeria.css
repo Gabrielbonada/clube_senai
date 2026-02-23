@@ -1,6 +1,9 @@
 /* =======================
    GALERIA - BODY ROXO ESCURO
 ======================= */
+html {
+  scroll-behavior: smooth;
+}
 body {
     margin: 0;
     background: #1a032b;

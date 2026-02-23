@@ -12,9 +12,10 @@ $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
 
 // 🔎 VERIFICA EMAIL
-$sql = "SELECT id FROM cadastro_das_amoras WHERE email = ?";
+$sql = "INSERT INTO cadastro_das_amoras (nome, email, senha, tipo)
+        VALUES (?, ?, ?, 'user')";
 $stmt = $pdo->prepare($sql);
-$stmt->execute([$email]);
+$stmt->execute([$nome, $email, $senhaHash]);
 
 if($stmt->rowCount() > 0){
     die("Email já cadastrado!");

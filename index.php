@@ -1,5 +1,3 @@
-<!--  -->
-<!--sistema de segurança. Usuario precisa estar logado para entrar no sistema-->
 <?php
 session_start();
 
@@ -18,14 +16,13 @@ if (!isset($_SESSION['usuario'])) {
     <!-- bibliotecas do site e links  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
+
     <title>Clube das Amoras | Portfolio & Cursos</title>
     <link rel="stylesheet" href="style.css">
-=======
     <title>Colorista Artística | Portfolio & Cursos</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="index.css">
->>>>>>> 57c007514b183d1230a9774d0a623a26d1f2d0fb
+
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap"
         rel="stylesheet">
@@ -59,7 +56,8 @@ if (!isset($_SESSION['usuario'])) {
             <li><a href="#home">Início</a></li>
             <li><a href="#galeria">Galeria de Coloridos</a></li>
             <li><a href="#cursos">Produtos & Cursos</a></li>
-            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about-me">Blog & sobre mim</a></li>
+            <li><a href="#clube_das_amoras">Clube das amoras</a></li>
             <li><a href="#contato">Contatos</a></li>
             <?php if (!isset($_SESSION['usuario'])): ?>
 
@@ -144,16 +142,16 @@ if (!isset($_SESSION['usuario'])) {
                     <img src="assets/banner01.jpeg" alt="">
                 </div>
                 <div class="content-right">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sequi facilis quibusdam
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur sequi facilis quibusdam
                         nesciunt provident nostrum aspernatur nobis repellat, quo hic. Labore ratione illum sit
                         doloremque quae natus, ipsa atque quos!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae odit quos
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repudiandae odit quos
                         officia accusantium laboriosam nihil aliquam quisquam assumenda aspernatur? Eos hic molestiae
                         non nesciunt maiores sapiente ipsam minima dignissimos.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias quos error commodi
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda alias quos error commodi
                         eos ullam saepe totam beatae tempore doloremque eligendi autem fugiat incidunt dolor nostrum,
                         dolorum id iste asperiores?</p>
-                        <div class="hero-buttons">
+                    <div class="hero-buttons">
                         <a style="margin-top: 10px;" href="blog.php" class="primary-btn">Acompanhe o blog</a>
 
                     </div>
@@ -162,7 +160,7 @@ if (!isset($_SESSION['usuario'])) {
         </section>
 
         <!-- Metodologia - Texto ESQUERDA, Imagem DIREITA (flex-direction: row-reverse inverte visualmente) -->
-        <section id="methodology" class="methodology-section">
+        <section id="clube_das_amoras" class="methodology-section">
             <h3 class="methodology-title">Clube das amoras</h3>
             <div class="box-inverted">
                 <div class="content-left">

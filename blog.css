@@ -6,9 +6,11 @@
   background-color: var(--white);
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
 .testimonials-container {
   display: flex;
   flex-wrap: wrap;
@@ -16,12 +18,13 @@ html {
   gap: 40px;
   margin-top: 50px;
 }
+
 .testimonial-card {
   max-width: 340px;
   padding: 25px;
   border-radius: 18px;
   background: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
   transition: 0.3s ease;
   position: relative;
 }
@@ -39,12 +42,14 @@ html {
   left: 15px;
   opacity: 0.2;
 }
+
 .testimonial-author img {
   width: 55px;
   height: 55px;
   border-radius: 50%;
   border: 3px solid var(--accent-purple);
 }
+
 .testimonial-rating i {
   transition: 0.2s;
 }
@@ -52,6 +57,7 @@ html {
 .testimonial-card:hover .testimonial-rating i {
   transform: scale(1.2);
 }
+
 .blog-image {
   width: 100%;
   height: 420px;
@@ -61,21 +67,24 @@ html {
 }
 
 .blog-post {
+
   padding: 120px 5%;
   background: linear-gradient(180deg, #fff, #f3e8ff);
 }
+
 .blog-title {
   font-size: 3.2rem;
   margin-bottom: 10px;
   color: var(--primary-purple);
 }
+
 .comment-form {
   max-width: 650px;
   margin: 0 auto;
   padding: 30px;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .comment-form input,
@@ -133,13 +142,59 @@ html {
   background-color: var(--white);
 }
 
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+
+.blog-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
+  transition: .3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card-content {
+  padding: 20px;
+}
+
+.blog-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-purple);
+}
+
+.blog-card p {
+  font-size: .9rem;
+  color: var(--gray);
+}
+
 .blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   max-width: 850px;
   margin: auto;
   padding: 40px;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 .blog-title {
@@ -182,15 +237,19 @@ html {
 
 .category {
   padding: 8px 18px;
-  background: #eee;
-  border-radius: 20px;
+  background: white;
+  border-radius: 60px;
   cursor: pointer;
   transition: 0.3s;
 }
 
+.categories-container a {
+  text-decoration: none;
+}
+
 .category:hover,
 .category.active {
-  background: #c2185b;
+  background: #7d379a;
   color: white;
 }
 
@@ -244,6 +303,7 @@ html {
 .related-card:hover {
   transform: translateY(-5px);
 }
+
 .comment-form-section {
   padding: 60px 20px;
   text-align: center;
@@ -282,17 +342,94 @@ html {
 .comment-form button:hover {
   background: var(--dark-purple);
 }
-.admin-create-post{
-    background:#fff;
-    padding:20px;
-    margin:40px auto;
-    max-width:800px;
-    border-radius:20px;
+
+.admin-create-post {
+  background: #fff;
+  padding: 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 20px;
 }
 
 .create-post-form input,
-.create-post-form textarea{
-    width:100%;
-    margin-bottom:10px;
-    padding:10px;
+.create-post-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.btn-admin {
+  width: 20%;
+  display: flex;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: var(--primary-purple);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn-blog {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: var(--primary-purple);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
+/* ====================================================================
+   BOTÃO WHATSAPP FLUTUANTE - CTA fixo para contato
+===================================================================== */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-purple) 0%, var(--dark-purple) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(106, 13, 173, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+  border: none;
+  cursor: pointer;
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 0 12px 35px rgba(106, 13, 173, 0.6);
+}
+
+.whatsapp-btn:active {
+  transform: scale(0.95);
+}
+
+/* Animação de pulsação do botão */
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(106, 13, 173, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(106, 13, 173, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(106, 13, 173, 0);
+  }
 }
