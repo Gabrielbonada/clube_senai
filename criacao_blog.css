@@ -69,3 +69,18 @@ body{
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(123,44,255,0.3);
 }
+.admin-tools{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.btn-backup{
+    background:linear-gradient(45deg,#7b2cbf,#c77dff);
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:600;
+}

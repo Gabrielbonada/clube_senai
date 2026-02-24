@@ -28,7 +28,7 @@ require 'conexao.php';
     <h1>Criar Novo Post </h1>
     <p class="subtitle">Compartilhe suas ideias com o Clube das Amoras</p>
 
-    <form method="POST" action="salvar_novo_blog.php" class="create-form">
+    <form method="POST" action="salvar_novo_blog.php" class="create-form" enctype="multipart/form-data"> 
 
         <input type="text" name="titulo" placeholder="Título do post" required>
 
@@ -40,18 +40,24 @@ require 'conexao.php';
             <option>Dicas</option>
         </select>
 
-        <input type="text" name="imagem" placeholder="URL da imagem">
+        <input type="file" name="imagem" placeholder="image/*">
 
         <textarea name="conteudo1" placeholder="Escreva o conteúdo do post..." required></textarea>
-        <textarea name="conteudo2" placeholder="Escreva o conteúdo do post..." required></textarea>
-        <textarea name="conteudo3" placeholder="Escreva o conteúdo do post..." required></textarea>
-        <textarea name="conteudo4" placeholder="Escreva o conteúdo do post..." required></textarea>
-        <textarea name="conteudo5" placeholder="Escreva o conteúdo do post..." required></textarea>
+        <textarea name="conteudo2" placeholder="Escreva o conteúdo do post..." ></textarea>
+        <textarea name="conteudo3" placeholder="Escreva o conteúdo do post..." ></textarea>
+        <textarea name="conteudo4" placeholder="Escreva o conteúdo do post..." ></textarea>
+        <textarea name="conteudo5" placeholder="Escreva o conteúdo do post..." ></textarea>
 
-        <button type="submit">Publicar Post 💜</button>
+        <button type="submit">Publicar Post </button>
 
     </form>
 
+    <h2>criar backup</h2>
+    <div class="admin-tools">
+    <form action="gerarbackup.php" method="POST">
+        <button class="btn-backup">📦 Gerar Backup do Site</button>
+    </form>
+</div>
 </div>
 
 </body>

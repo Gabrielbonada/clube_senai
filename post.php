@@ -93,25 +93,24 @@ if (!$post) {
 
     <h1 class="title-post"><?= htmlspecialchars($post['titulo']) ?></h1>
     <div class="linha-decorativa"></div>
-    <main class="post-container">
+   <main class="post-container">
 
-        <div class="post-image">
-            <img src="<?= htmlspecialchars($post['imagem']) ?>" alt="">
-        </div>
+    <div class="post-image">
+       <img src="<?= $post['imagem'] ?>" alt="Imagem do post">
+    </div>
 
-        <div class="post-content">
-            <?= nl2br(htmlspecialchars($post['conteudo1'])) ?>
-            <?= nl2br(htmlspecialchars($post['conteudo2'])) ?>
-            <?= nl2br(htmlspecialchars($post['conteudo3'])) ?>
+    <div class="post-content">
+        <p><?= nl2br(htmlspecialchars($post['conteudo1'])) ?></p>
+        <p><?= nl2br(htmlspecialchars($post['conteudo2'])) ?></p> 
+        <p><?= nl2br(htmlspecialchars($post['conteudo3'])) ?></p>
+       
+        
+    </div>
 
-        </div>
-    </main>
+</main>
 
 
-     <div class="post-content">
-            <?= nl2br(htmlspecialchars($post['conteudo4'])) ?>
-            <?= nl2br(htmlspecialchars($post['conteudo5'])) ?>
-        </div>
+   
     <div class="post-footer">
         <a href="blog.php" class="btn-voltar">← Voltar para o Blog</a>
     </div>

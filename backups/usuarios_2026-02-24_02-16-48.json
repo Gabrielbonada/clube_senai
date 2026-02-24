@@ -1,0 +1,38 @@
+[
+    {
+        "ID": 3,
+        "nome": "gabriel bonada",
+        "email": "biel.vaztrindade@gmail.com",
+        "senha": "$2y$10$LuzCbx4Nq5LtH6LlUYygF.lga3cdI\/ReG6Q3vJXEm8NVANpooMKPW",
+        "data": "0000-00-00",
+        "hora": "0000-00-00",
+        "tipo": "user"
+    },
+    {
+        "ID": 5,
+        "nome": "Betania Bonada",
+        "email": "betania.bonada@gmail.com",
+        "senha": "$2y$10$K5CqaUwZfkn3jsdUVdj.lOGHhMdumYlNWu\/qo1sxQxPkaPcWxriaC",
+        "data": "0000-00-00",
+        "hora": "0000-00-00",
+        "tipo": "admin"
+    },
+    {
+        "ID": 6,
+        "nome": "benjamin",
+        "email": "benjamin@email.com",
+        "senha": "$2y$10$HsNdeNcPLiY3WmDyLLBDvu3LQ4coNBsyceARfBJVrdsWolAzKem0S",
+        "data": "0000-00-00",
+        "hora": "0000-00-00",
+        "tipo": "user"
+    },
+    {
+        "ID": 7,
+        "nome": "benjamin",
+        "email": "benjamin@email.com",
+        "senha": "$2y$10$czqis88RJ41VOcYb2YWpYu6dPMXDdmGXGszTONI4bixNxI96SZyyW",
+        "data": "0000-00-00",
+        "hora": "0000-00-00",
+        "tipo": "user"
+    }
+]
